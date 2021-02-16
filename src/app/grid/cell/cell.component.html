@@ -1,0 +1,7 @@
+<a
+  (click)="onClick()"
+  [@incrementValue]="cell.value"
+  [@changedToNull]="this.cell.value === null"
+>
+  <span>{{ cell.value }}</span>
+</a>

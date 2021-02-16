@@ -1,0 +1,12 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.input-field {
+  padding: 0px 10px 0px 10px;
+}
+
+.submit-button {
+  width: 100%;
+  text-align: center;
+}

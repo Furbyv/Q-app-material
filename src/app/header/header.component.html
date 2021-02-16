@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+  <h1 class="app-name">{{ title }}</h1>
+  <span class="spacer"></span>
+  <button
+    mat-icon-button
+    #menuTrigger="matMenuTrigger"
+    [matMenuTriggerFor]="menu"
+    aria-label="Menu-list"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div
+      (click)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()"
+    >
+      <form [formGroup]="gridForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="input-field">
+          <mat-label>Grid dimensions</mat-label>
+          <input
+            matInput
+            type="number"
+            id="dimensions"
+            class="form-control"
+            formControlName="dimensions"
+          />
+          <mat-hint>Value between 1 and 100</mat-hint>
+        </mat-form-field>
+        <br /><br />
+        <mat-form-field appearance="fill" class="input-field">
+          <mat-label>Cells for Fibonacci sequence</mat-label>
+          <input
+            matInput
+            type="number"
+            id="fibonacci"
+            class="form-control"
+            formControlName="fibonacci"
+          />
+          <mat-hint>Value between 3 and 10</mat-hint>
+        </mat-form-field>
+        <hr />
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          class="submit-button"
+          [disabled]="!gridForm.valid"
+        >
+          Create Grid
+        </button>
+      </form>
+    </div>
+  </mat-menu>
+</mat-toolbar>

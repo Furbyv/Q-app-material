@@ -1,0 +1,4 @@
+<app-row
+  *ngFor="let row of gridService.rows$ | async; trackBy: identify"
+  [row]="row"
+></app-row>

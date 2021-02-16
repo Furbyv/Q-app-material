@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "q-project-603eb": {
+      "hosting": {
+        "Q-app-material": [
+          "q-project-603eb"
+        ]
+      }
+    }
+  }
+}

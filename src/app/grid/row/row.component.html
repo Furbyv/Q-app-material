@@ -1,0 +1,5 @@
+<mat-grid-list [cols]="row.cells.length" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let cell of row.cells; trackBy: identify">
+    <app-cell [rowIndex]="row.index" [cell]="cell"></app-cell>
+  </mat-grid-tile>
+</mat-grid-list>
